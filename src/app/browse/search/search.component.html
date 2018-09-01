@@ -1,4 +1,6 @@
 <div *ngIf="search$ | async as search">
-  <input type="text" [value]="search.name" #name/>
-  <button (click)="dispatchSearch(name.value)">Search</button>
+  <form #searchForm="ngForm" (submit)="dispatchSearch(searchForm)">
+    <input type="text" [ngModel]="search.name" name="name" placeholder="Name"/>
+    <button type="submit">Search</button>
+  </form>
 </div>

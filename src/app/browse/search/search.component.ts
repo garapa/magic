@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 
 import { Search } from '../store/browse.actions';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-search',
@@ -16,12 +17,12 @@ export class SearchComponent implements OnInit {
     private store: Store<any>
   ) { }
 
-  dispatchSearch(name: string) {
-    this.store.dispatch(new Search({ name }));
+  dispatchSearch(form: NgForm) {
+    this.store.dispatch(new Search(form.value));
   }
 
   ngOnInit() {
-    this.store.dispatch(new Search({ name: 'azami' }));
+    // this.store.dispatch(new Search({ name: 'azami' }));
   }
 
 }
