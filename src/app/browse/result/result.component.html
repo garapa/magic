@@ -1,0 +1,6 @@
+<section *ngIf="cards$ | async as cards">
+  <div *ngFor="let card of cards">
+    <img [src]="card.imageUrl"/>
+    {{ card.name }}
+  </div>
+</section>
