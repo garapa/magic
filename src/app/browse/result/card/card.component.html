@@ -1,0 +1,6 @@
+<img *ngIf="card.imageUrl as url; else noImage" [src]="url"/>
+<ng-template #noImage>
+  <div class="no-image">
+    <p>{{card.name}}</p>
+  </div>
+</ng-template>

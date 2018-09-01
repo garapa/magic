@@ -1,0 +1,16 @@
+$default-img-height: 311px;
+$default-img-width: 223px;
+
+:host {
+  display: inline-block;
+  vertical-align: top;
+}
+
+img, 
+.no-image {
+  margin: 10px;
+  height: $default-img-height;
+  width: $default-img-width;
+  border-radius: 14px;
+  transition: all .1s ease-out;
+}

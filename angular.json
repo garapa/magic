@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "magic"
+  "defaultProject": "magic",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

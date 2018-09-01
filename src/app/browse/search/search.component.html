@@ -1,0 +1,4 @@
+<div *ngIf="search$ | async as search">
+  <input type="text" [value]="search.name" #name/>
+  <button (click)="dispatchSearch(name.value)">Search</button>
+</div>
